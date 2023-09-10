@@ -1,6 +1,12 @@
-## Learn data structure
+## Aprendendo estrutura de dados
 
-### Languages
+### Linguages abordadas
 
 - Java
 - C
+
+### Assuntos estudados
+
+- Variáveis e Memória
+- Ponteiros
+- Funções
