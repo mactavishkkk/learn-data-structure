@@ -10,3 +10,5 @@
 - Variáveis e Memória
 - Ponteiros
 - Funções
+- Vetores
+- Alocação estática e dinâmica
