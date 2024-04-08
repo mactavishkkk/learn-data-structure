@@ -18,6 +18,12 @@ void imprimir_vetor(const int *v, int n)
     printf("\n");
 }
 
+void desalocar_vetor(int **v)
+{
+    free(*v);
+    *v = NULL;
+}
+
 int main()
 {
     // alocacao estatica
@@ -38,8 +44,7 @@ int main()
     soma_vetor_escalar(vh, 5, 5);
     imprimir_vetor(vh, 5);
 
-    free(vh);
-    vh = NULL;
+    desalocar_vetor(&vh);
 
     return 0;
 }
