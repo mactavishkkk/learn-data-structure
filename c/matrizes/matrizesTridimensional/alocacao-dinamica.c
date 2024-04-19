@@ -43,5 +43,16 @@ int main()
     }
     puts("");
 
+    for (int s = 0; s < slices; s++)
+    {
+        for (int r = 0; r < rows; r++)
+        {
+            free(m[s][r]);
+        }
+        free(m[s]);
+    }
+    free(m);
+    m = NULL;
+
     return 0;
 }

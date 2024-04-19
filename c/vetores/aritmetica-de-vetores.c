@@ -6,7 +6,8 @@ int main()
 
     printf("&v = %p, v = %p\n\n", &v, v);
 
-    for (int i = 0; 1 < 5; i++){
+    for (int i = 0; 1 < 5; i++)
+    {
         printf("&v[%d] = %p, v[%d] = %d\n", i, &v[i], i, v[i]);
         printf("(v + %d) = %p, *(v + %d) = %d\n", i, (v + i), i, *(v + i));
     }
