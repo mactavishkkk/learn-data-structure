@@ -2,7 +2,6 @@
 
 ### Linguages abordadas
 
-- Java
 - C
 
 ### Assuntos estudados
@@ -11,4 +10,6 @@
 - Ponteiros
 - Funções
 - Vetores
+- Matrizes
 - Alocação estática e dinâmica
+- Structs
