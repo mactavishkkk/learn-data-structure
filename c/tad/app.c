@@ -3,10 +3,14 @@
 
 int main()
 {
-    FloatVector *obj = create(10);
-    printf("FloatVector criado\n");
+    FloatVector *obj = create(5);
+    print(obj);
 
-    puts("...");
+    append(obj, 1.5);
+    append(obj, 2);
+    append(obj, 5);
+
+    print(obj);
 
     printf("FloatVector destuído.\n");
     destroy(&obj);

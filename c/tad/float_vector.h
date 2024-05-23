@@ -7,6 +7,6 @@ int size(const FloatVector *vector);
 int capacity(const FloatVector *vector);
 float at(const FloatVector *vector, int index);
 float get(const FloatVector *vector, int index);
-void append(const FloatVector *vector, float val);
+void append(FloatVector *vector, float val);
 void set(const FloatVector *vector, int index, float val);
 void print(const FloatVector *vector);
