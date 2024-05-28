@@ -1,6 +1,7 @@
 #include "float_vector.h"
 #include <stdlib.h>
 #include <stdio.h>
+#include <stdbool.h>
 
 typedef struct float_vector
 {
@@ -8,6 +9,49 @@ typedef struct float_vector
     int size;
     float *data;
 } FloatVector;
+
+
+bool _isFull(const FloatVector *vector)
+{
+    return vector->size == vector->capacity;
+}
+
+int size(const FloatVector *vector)
+{
+    return vector->size;
+}
+
+int capacity(const FloatVector *vector)
+{
+    return vector->capacity;
+}
+
+float at(const FloatVector *vector, int index)
+{
+    if (index < 0 || index >= vector->size)
+    {
+        fprintf(stderr, "ERROR in 'at' - Index is out of bounds\n");
+        exit(EXIT_FAILURE);
+    }
+
+    return vector->data[index];
+}
+
+float get(const FloatVector *vector, int index)
+{
+    return vector->data[index];
+}
+
+void set(const FloatVector *vector, int index, float val)
+{
+    if (index < 0 || index >= vector->size)
+    {
+        fprintf(stderr, "ERROR in 'set' - Index is out of bounds\n");
+        exit(EXIT_FAILURE);
+    }
+
+    vector->data[index] = val;
+}
 
 FloatVector *create(int capacity)
 {
@@ -30,7 +74,7 @@ void destroy(FloatVector **vector_reference)
 
 void append(FloatVector *vector, float val)
 {
-    if (vector->size == vector->capacity)
+    if (_isFull(vector))
     {
         fprintf(stderr, "ERROR in 'append' - Vector is full\n");
         exit(EXIT_FAILURE);
